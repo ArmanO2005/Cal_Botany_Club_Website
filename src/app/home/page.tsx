@@ -1,8 +1,23 @@
 "use client"
 
 import Image from "next/image";
+import BoardPage from "../board/page";
+import '../globals.css'
 import { useEffect } from "react";
+import { Merriweather, Roboto } from "@next/font/google";
 
+
+const merriweather = Merriweather({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+});
+
+const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 const PROJECT_ID = 249905;
 const API_BASE = "https://api.inaturalist.org/v1/observations";
@@ -15,37 +30,22 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="min-h-screen font-sans bg-white text-gray-900">
-      {/* Hero Section */}
-      <section className="bg-emerald-700 text-white py-20 px-6 text-center">
-        <h1 className="text-5xl font-bold mb-4">
-          The Botany Club at UC Berkeley
+    <main className={`${roboto.className} min-h-screen bg-white text-gray-900`}>
+      <section 
+        className="text-white py-30 text-center"
+        style={{ backgroundImage: "url('/superBloom.webp')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <h1 className={`${merriweather.className} text-5xl font-thin mb-4`}>
+          Botany at Berkeley
         </h1>
-        <div className="flex justify-center items-center space-x-4">
-          <h1 className="text-3xl font-thin">
-            In collaboration with
-          </h1>
-          <img
-            src="/botanicGardenLogo.svg"
-            alt="Botanic Garden Logo"
-            className="w-50 h-14"
-          />
-          <img
-            src="/herbariumLogo.png"
-            alt="Herbarium Logo"
-            className="w-16 h-16"
-          />
-        </div>
       </section>
 
       {/* Events Section */}
       <section className="flex justify-center">
         <div className="m-12">
-          <h2 className="text-3xl font-semibold mb-4">Upcoming Events</h2>
+          <h2 className="text-3xl font-semibold mb-4">Join Us</h2>
           <ul className="list-disc pl-6 text-lg space-y-2">
-            <li>📅 October 10 — tbd</li>
-            <li>📅 October 20 — tbd</li>
-            <li>📅 November 5 — tbd</li>
+            <li>📅 Meetings Second Tuesday of Every Month at 5:30 pm</li>
           </ul>
         </div>
         <div className="m-12">
@@ -55,9 +55,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-emerald-700 py-12 px-6">
-        <h2 className="text-3xl font-bold mb-4 text-white">Join Our INaturalist Project</h2>
+      <section className="bg-foreground py-12 px-6">
+        <h2 className="text-3xl font-semibold mb-4 text-white">Recent Observations Made by Our Members</h2>
+        <h2 className="text-2xl font-thin mb-4 text-white">Join Our <a href="https://www.inaturalist.org/projects/uc-berkeley-botany-club" className="text-blue-200 underline">INaturalist Project </a></h2>
         <div className={`widget-${PROJECT_ID} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}></div>
+        <a href="https://www.inaturalist.org/projects/uc-berkeley-botany-club?tab=observations" className="text-blue-200">See More </a>
       </section>
 
     </main>
