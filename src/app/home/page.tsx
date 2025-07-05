@@ -35,7 +35,7 @@ export default function Page() {
         className="text-white py-30 text-center"
         style={{ backgroundImage: "url('/superBloom.webp')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        <h1 className={`${merriweather.className} text-5xl font-thin mb-4`}>
+        <h1 className={`${merriweather.className} text-7xl font-thin mb-4`}>
           Botany at Berkeley
         </h1>
       </section>
@@ -45,7 +45,10 @@ export default function Page() {
         <div className="m-12">
           <h2 className="text-3xl font-semibold mb-4">Join Us</h2>
           <ul className="list-disc pl-6 text-lg space-y-2">
-            <li>📅 Meetings Second Tuesday of Every Month at 5:30 pm</li>
+            <li>📅 Meetings occur during the second Tuesday of every month at 5:30 pm</li>
+            <li>📍 Meetings will be held in the Herbarium Conference Room, 1002 VLSB</li>
+            <li>🎤 Speakers will be posted on our calendar prior to each meeting</li>
+            <li>⛺ Club trips will be posted on Instagram and on the calendar</li>
           </ul>
         </div>
         <div className="m-12">
@@ -59,7 +62,7 @@ export default function Page() {
         <h2 className="text-3xl font-semibold mb-4 text-white">Recent Observations Made by Our Members</h2>
         <h2 className="text-2xl font-thin mb-4 text-white">Join Our <a href="https://www.inaturalist.org/projects/uc-berkeley-botany-club" className="text-blue-200 underline">INaturalist Project </a></h2>
         <div className={`widget-${PROJECT_ID} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}></div>
-        <a href="https://www.inaturalist.org/projects/uc-berkeley-botany-club?tab=observations" className="text-blue-200">See More </a>
+        <a href="https://www.inaturalist.org/projects/uc-berkeley-botany-club?tab=observations" className="text-2xl text-blue-200">See More </a>
       </section>
 
     </main>

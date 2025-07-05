@@ -1,6 +1,20 @@
 "use client";
 
 import React from "react";
+import { Merriweather, Roboto } from "@next/font/google";
+
+
+const merriweather = Merriweather({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+});
+
+const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 // TypeScript interface
 interface BoardMember {
@@ -27,7 +41,7 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
 }
 
 export default function BoardPage() {
-  const boardMembers: BoardMember[] = [
+  const studentBoardMembers: BoardMember[] = [
     {
       name: "Arman Omidvar",
       title: "President",
@@ -35,37 +49,79 @@ export default function BoardPage() {
       imageSrc: "/members/alice.jpg",
     },
     {
-      name: "Bob Smith",
+      name: "Kelvin Snell",
       title: "Vice President",
       bio: "Junior in Environmental Science who loves hiking and ecosystem restoration.",
       imageSrc: "/members/bob.jpg",
     },
     {
-      name: "Carol Lee",
+      name: "Yaeko Long",
       title: "Treasurer",
-      bio: "Finance major helping the club stay on budget while organizing fun events.",
+      bio: "Description",
+      imageSrc: "/members/carol.jpg",
+    },
+    {
+      name: "TBD",
+      title: "Secretary",
+      bio: "Description",
+      imageSrc: "/members/david.jpg",
+    },
+  ];
+
+
+  const staffBoardMembers: BoardMember[] = [
+    {
+      name: "Clare Loughran",
+      title: "Advisor",
+      bio: "Curator of the UC Botanical Garden",
+      imageSrc: "/members/alice.jpg",
+    },
+    {
+      name: "Bob Smith",
+      title: "Advisor",
+      bio: "description",
+      imageSrc: "/members/bob.jpg",
+    },
+    {
+      name: "Carol Lee",
+      title: "Advisor",
+      bio: "description",
       imageSrc: "/members/carol.jpg",
     },
     {
       name: "David Nguyen",
-      title: "Secretary",
-      bio: "Note-taker and meeting organizer, also runs the club newsletter.",
+      title: "Advisor",
+      bio: "description",
       imageSrc: "/members/david.jpg",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-foreground py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
-          Student Board Members
-        </h1>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
-          {boardMembers.map((member) => (
-            <BoardMemberCard key={member.name} member={member} />
-          ))}
+    <main className={`${roboto.className} min-h-screen bg-white`}>
+      <section className="bg-foreground py-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className={`${merriweather.className} text-4xl font-bold text-center text-gray-900 mb-10`}>
+            Student Board Members
+          </h1>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+            {studentBoardMembers.map((member) => (
+              <BoardMemberCard key={member.name} member={member} />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+      <section className="bg-white py-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className={`${merriweather.className} text-4xl font-bold text-center text-gray-900 mb-10`}>
+            Departmental Advisors
+          </h1>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+            {staffBoardMembers.map((member) => (
+              <BoardMemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
