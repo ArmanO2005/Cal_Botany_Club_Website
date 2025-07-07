@@ -77,20 +77,20 @@ export default function BoardPage() {
       imageSrc: "/members/alice.jpg",
     },
     {
-      name: "Bob Smith",
+      name: "Nina House",
       title: "Advisor",
       bio: "description",
       imageSrc: "/members/bob.jpg",
     },
     {
-      name: "Carol Lee",
+      name: "Raphaela Floreani Buzbee",
       title: "Advisor",
       bio: "description",
       imageSrc: "/members/carol.jpg",
     },
     {
-      name: "David Nguyen",
-      title: "Advisor",
+      name: "Keith Gilless",
+      title: "Faculty Sponsor",
       bio: "description",
       imageSrc: "/members/david.jpg",
     },
@@ -100,7 +100,7 @@ export default function BoardPage() {
     <main className={`${roboto.className} min-h-screen bg-white`}>
       <section className="bg-foreground py-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className={`${merriweather.className} text-4xl font-bold text-center text-gray-900 mb-10`}>
+          <h1 className={`${merriweather.className} text-4xl font-bold text-center text-white mb-10`}>
             Student Board Members
           </h1>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">

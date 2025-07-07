@@ -28,6 +28,9 @@ export default function Navbar() {
           <a className="text-1xl font-bold p-3" href="https://ucjeps.berkeley.edu/news/botanylunch/">
             Botany Lunch
           </a>
+          <a className="text-1xl font-bold p-3" href="/merch">
+            Merch
+          </a>
         </div>
         <div className="flex justify-center items-center space-x-4">
           <h1 className={`${merriweather.className} text-1xl mr-2`}>
