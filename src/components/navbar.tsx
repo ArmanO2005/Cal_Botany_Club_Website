@@ -25,6 +25,9 @@ export default function Navbar() {
           <a className="text-1xl font-bold p-3" href="/board">
             People
           </a>
+          <a className="text-1xl font-bold p-3" href="/calendar">
+            Calendar
+          </a>
           <a className="text-1xl font-bold p-3" href="https://ucjeps.berkeley.edu/news/botanylunch/">
             Botany Lunch
           </a>

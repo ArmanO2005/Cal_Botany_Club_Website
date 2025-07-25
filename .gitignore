@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/src/app/secrets.json
 
 # debug
 npm-debug.log*

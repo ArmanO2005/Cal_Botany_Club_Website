@@ -31,7 +31,7 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
       <img
         src={member.imageSrc}
         alt={`${member.name} photo`}
-        className="w-32 h-32 mx-auto object-cover mb-4"
+        className="w-50 h-50 mx-auto object-cover mb-4"
       />
       <h3 className="text-xl font-bold">{member.name}</h3>
       <p className="text-sm text-gray-600">{member.title}</p>
@@ -45,8 +45,8 @@ export default function BoardPage() {
     {
       name: "Arman Omidvar",
       title: "President",
-      bio: "I work in curation at the UC Botanic Garden. I'm studying Statistics and Data Science in the c/o '27",
-      imageSrc: "/members/alice.jpg",
+      bio: "Arman is a Statistics and Data Science major in the c/o '27. He currently works in curation at the UC Botanical Garden and is passionate about plant systematics and taxonomy",
+      imageSrc: "/board/Arman.jpg",
     },
     {
       name: "Kelvin Snell",
@@ -57,14 +57,14 @@ export default function BoardPage() {
     {
       name: "Yaeko Long",
       title: "Treasurer",
-      bio: "Description",
+      bio: "Yaeko is a Plant Biology major in the c/o '26. They are interested in plant ecology and conservation.",
       imageSrc: "/members/carol.jpg",
     },
     {
-      name: "TBD",
+      name: "Sasha Bergseid",
       title: "Secretary",
-      bio: "Description",
-      imageSrc: "/members/david.jpg",
+      bio: "Sasha is a sophomore EECS major with a Russian language and literature minor. In her free time, she likes to defend spiders in verbal debate, participate in all things music, swim, and hide in the shade while being outside.",
+      imageSrc: "/board/Sasha.jpg",
     },
   ];
 
@@ -73,7 +73,7 @@ export default function BoardPage() {
     {
       name: "Clare Loughran",
       title: "Advisor",
-      bio: "Curator of the UC Botanical Garden",
+      bio: "Clare’s love of plants began during her time at UC Davis, where she earned a B.S. in Environmental Horticulture with an emphasis in Biodiversity and Restoration in 2011. During her career she has worked at the UC and Jepson Herbaria, the California Natural Diversity Database, the UC Davis Center for Plant Diversity, and as a Botanist for an ecological consulting firm. In her current role as Curator at the UC Botanical Garden, is eager to foster connections between students, staff, faculty, and the Garden. ",
       imageSrc: "/members/alice.jpg",
     },
     {
