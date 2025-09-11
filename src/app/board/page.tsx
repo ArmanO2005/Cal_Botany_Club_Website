@@ -51,14 +51,14 @@ export default function BoardPage() {
     {
       name: "Kelvin Snell",
       title: "Vice President",
-      bio: "Junior in Environmental Science who loves hiking and ecosystem restoration.",
-      imageSrc: "/members/bob.jpg",
+      bio: "Kelvin is a Genetics and Plant Biology major in the c/o '26.",
+      imageSrc: "/board/Kelvin.jpg",
     },
     {
       name: "Yaeko Long",
       title: "Treasurer",
-      bio: "Yaeko is a Plant Biology major in the c/o '26. They are interested in plant ecology and conservation.",
-      imageSrc: "/members/carol.jpg",
+      bio: "Yaeko is a Genetics and Plant Biology major in the c/o '26.",
+      imageSrc: "/board/Yaeko.jpg",
     },
     {
       name: "Sasha Bergseid",
@@ -74,25 +74,25 @@ export default function BoardPage() {
       name: "Clare Loughran",
       title: "Advisor",
       bio: "Clare’s love of plants began during her time at UC Davis, where she earned a B.S. in Environmental Horticulture with an emphasis in Biodiversity and Restoration in 2011. During her career she has worked at the UC and Jepson Herbaria, the California Natural Diversity Database, the UC Davis Center for Plant Diversity, and as a Botanist for an ecological consulting firm. In her current role as Curator at the UC Botanical Garden, is eager to foster connections between students, staff, faculty, and the Garden. ",
-      imageSrc: "/members/alice.jpg",
+      imageSrc: "/board/Clare.jpg",
     },
     {
       name: "Nina House",
       title: "Advisor",
-      bio: "description",
-      imageSrc: "/members/bob.jpg",
+      bio: "",
+      imageSrc: "/board/Nina.jpg",
     },
     {
       name: "Raphaela Floreani Buzbee",
       title: "Advisor",
-      bio: "description",
-      imageSrc: "/members/carol.jpg",
+      bio: "",
+      imageSrc: "/board/Raphaela.jpg",
     },
     {
       name: "Keith Gilless",
       title: "Faculty Sponsor",
-      bio: "description",
-      imageSrc: "/members/david.jpg",
+      bio: "",
+      imageSrc: "/board/Keith.jpg",
     },
   ];
 
