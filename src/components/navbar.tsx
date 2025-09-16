@@ -1,6 +1,9 @@
 "use client"
 
-import { Merriweather, Roboto } from "@next/font/google";
+import { Merriweather, Roboto } from "next/font/google";
+import Link from "next/link";
+import Image from "next/image";
+
 
 
 const merriweather = Merriweather({
@@ -19,40 +22,44 @@ export default function Navbar() {
     return (
       <nav className="bg-white text-black flex justify-between">
         <div className="bg-white text-black flex">
-          <a className="text-1xl font-bold p-3" href="/home">
+          <Link className="text-1xl font-bold p-3" href="/home">
             Home
-          </a>
-          <a className="text-1xl font-bold p-3" href="/board">
+          </Link>
+          <Link className="text-1xl font-bold p-3" href="/board">
             People
-          </a>
-          <a className="text-1xl font-bold p-3" href="/calendar">
+          </Link>
+          <Link className="text-1xl font-bold p-3" href="/calendar">
             Calendar
-          </a>
-          <a className="text-1xl font-bold p-3" href="https://ucjeps.berkeley.edu/news/botanylunch/">
+          </Link>
+          <Link className="text-1xl font-bold p-3" href="https://ucjeps.berkeley.edu/news/botanylunch/">
             Botany Lunch
-          </a>
-          <a className="text-1xl font-bold p-3" href="/merch">
+          </Link>
+          <Link className="text-1xl font-bold p-3" href="/merch">
             Merch
-          </a>
+          </Link>
         </div>
         <div className="flex justify-center items-center space-x-4">
           <h1 className={`${merriweather.className} text-1xl mr-2`}>
             In Collaboration With
           </h1>
-          <a href="https://botanicalgarden.berkeley.edu/">
-            <img
+          <Link href="https://botanicalgarden.berkeley.edu/">
+            <Image
               src="/botanicGardenLogo.svg"
               alt="Botanic Garden Logo"
               className="w-25 h-7"
+              width={100}
+              height={28}
             />
-          </a>
-          <a href="https://ucjeps.berkeley.edu/">
-            <img
+          </Link>
+          <Link href="https://ucjeps.berkeley.edu/">
+            <Image
               src="/herbariumLogo.png"
               alt="Herbarium Logo"
               className="w-8 h-8 mr-3"
+              width={100}
+              height={28}
             />
-          </a>
+          </Link>
         </div>
       </nav>
     );

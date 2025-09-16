@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import { Merriweather, Roboto } from "@next/font/google";
+import Image from "next/image";
+import { Merriweather, Roboto } from "next/font/google";
+import Link from "next/link";
 
 
 const merriweather = Merriweather({
@@ -28,10 +30,12 @@ interface BoardMember {
 function BoardMemberCard({ member }: { member: BoardMember }) {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 w-full max-w-sm text-center">
-      <img
+      <Image
         src={member.imageSrc}
         alt={`${member.name} photo`}
         className="w-50 h-50 mx-auto object-cover mb-4"
+        width={200}
+        height={200}
       />
       <h3 className="text-xl font-bold">{member.name}</h3>
       <p className="text-sm text-gray-600">{member.title}</p>
@@ -51,13 +55,13 @@ export default function BoardPage() {
     {
       name: "Kelvin Snell",
       title: "Vice President",
-      bio: "Kelvin is a Genetics and Plant Biology major in the c/o '26.",
+      bio: "Kelvin is a Genetics and Plant Biology major in the c/o '26. He enjoys hiking and finding cool little things. Don't ask him to ID mushrooms, but he'll gladly be impressed by anything you find. He is also currently interning at a lab studying cold tolerance in sorghum, so ask him questions about cold tolerance and circadian rhythms!",
       imageSrc: "/board/Kelvin.jpg",
     },
     {
       name: "Yaeko Long",
       title: "Treasurer",
-      bio: "Yaeko is a Genetics and Plant Biology major in the c/o '26.",
+      bio: "Yaeko is a Genetics and Plant Biology major and minoring in Food Systems in the c/o '26. They enjoy photography and nature walks and play piccolo in Cal Band",
       imageSrc: "/board/Yaeko.jpg",
     },
     {
@@ -121,6 +125,21 @@ export default function BoardPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="flex justify-between mt-6">
+        <h2 className="text-sm text-black">
+            We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.
+        </h2>
+
+        <Link href="https://www.ocf.berkeley.edu">
+            <Image 
+                src="/ocf-hosted-penguin-dark.svg" 
+                alt="Hosted by the OCF" 
+                width={100}
+                height={100}
+            />
+        </Link>
       </section>
     </main>
   );

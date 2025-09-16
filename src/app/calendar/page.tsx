@@ -6,6 +6,8 @@ import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import { useEffect, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
+import Link from "next/link";
+import Image from "next/image";
 
 interface Event {
   title: string;
@@ -42,6 +44,20 @@ export default function GoogleCalendar() {
         events={events}
         height="auto"
       />
+        <section className="flex justify-between mt-6">
+            <h2 className="text-sm text-black">
+                We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.
+            </h2>
+
+            <Link href="https://www.ocf.berkeley.edu">
+                <Image 
+                    src="/ocf-hosted-penguin-dark.svg" 
+                    alt="Hosted by the OCF" 
+                    width={100}
+                    height={100}
+                />
+            </Link>
+        </section>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Merriweather, Roboto } from "@next/font/google";
+import { Merriweather, Roboto } from "next/font/google";
 
 
 const merriweather = Merriweather({
