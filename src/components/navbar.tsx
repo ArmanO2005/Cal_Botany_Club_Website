@@ -22,19 +22,19 @@ export default function Navbar() {
     return (
       <nav className="bg-white text-black flex justify-between">
         <div className="bg-white text-black flex">
-          <Link className="text-1xl font-bold p-3" href="/home">
+          <Link className={`${roboto.className} text-1xl font-bold p-3`} href="/home">
             Home
           </Link>
-          <Link className="text-1xl font-bold p-3" href="/board">
+          <Link className={`${roboto.className} text-1xl font-bold p-3`} href="/board">
             People
           </Link>
-          <Link className="text-1xl font-bold p-3" href="/calendar">
+          <Link className={`${roboto.className} text-1xl font-bold p-3`} href="/calendar">
             Calendar
           </Link>
-          <Link className="text-1xl font-bold p-3" href="https://ucjeps.berkeley.edu/news/botanylunch/">
+          <Link className={`${roboto.className} text-1xl font-bold p-3`} href="https://ucjeps.berkeley.edu/news/botanylunch/">
             Botany Lunch
           </Link>
-          <Link className="text-1xl font-bold p-3" href="/merch">
+          <Link className={`${roboto.className} text-1xl font-bold p-3`} href="/merch">
             Merch
           </Link>
         </div>
@@ -55,8 +55,8 @@ export default function Navbar() {
             <Image
               src="/herbariumLogo.png"
               alt="Herbarium Logo"
-              className="w-8 h-8 mr-3"
-              width={100}
+              className="w-15 h-9 mr-3"
+              width={200}
               height={28}
             />
           </Link>

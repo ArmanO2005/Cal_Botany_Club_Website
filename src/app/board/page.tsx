@@ -83,7 +83,7 @@ export default function BoardPage() {
     {
       name: "Nina House",
       title: "Advisor",
-      bio: "",
+      bio: "Nina House is the Managing Editor of the Jepson eFlora and a Co-Coordinator for the Jepson Public Programs at the University & Jepson Herbaria. She received her Botany M.S. from the California Botanic Garden (Claremont Graduate University) in 2022. For her thesis, she completed a floristic inventory of the Manter & Salmon Creek watersheds in Tulare County, California. Nina is passionate about plant conservation and science communication.",
       imageSrc: "/board/Nina.jpg",
     },
     {
@@ -95,7 +95,7 @@ export default function BoardPage() {
     {
       name: "Keith Gilless",
       title: "Faculty Sponsor",
-      bio: "",
+      bio: "J. Keith Gilless is the Interim Director of the University and Jepson Herbaria, a Professor Emeritus of Forest Economics, and the former Dean of the Rausser College of Natural Resources. He is a member of the faculty of both the Department of Environmental Science, Policy, and Management and its Department of Agricultural and Resource Economics. He is the former faculty director for Berkeley's research forests and the Summer Session Forestry Field Camp taught on the Plumas National Forest.",
       imageSrc: "/board/Keith.jpg",
     },
   ];
