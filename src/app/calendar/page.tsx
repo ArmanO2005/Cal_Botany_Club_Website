@@ -37,27 +37,44 @@ export default function GoogleCalendar() {
   }, []);
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-lg">
-      <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView="dayGridMonth"
-        events={events}
-        height="auto"
-      />
-        <section className="flex justify-between mt-6">
-            <h2 className="text-sm text-black">
+    <div className="min-h-screen w-full p-2 md:p-4 bg-white shadow-lg text-gray-800">
+      <div className="max-w-7xl mx-auto">
+        <FullCalendar
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          initialView="dayGridMonth"
+          events={events}
+          height="auto"
+          headerToolbar={{
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          }}
+          buttonText={{
+            today: 'Today',
+            month: 'Month',
+            week: 'Week',
+            day: 'Day'
+          }}
+          // Make calendar responsive
+          windowResize={() => {}}
+          contentHeight="auto"
+        />
+        <section className="flex flex-col sm:flex-row justify-between items-center gap-4 px-2 py-6 mt-6 border-t border-gray-200">
+            <h2 className="text-xs sm:text-sm text-black text-center sm:text-left">
                 We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.
             </h2>
 
-            <Link href="https://www.ocf.berkeley.edu">
+            <Link href="https://www.ocf.berkeley.edu" className="flex-shrink-0">
                 <Image 
                     src="/ocf-hosted-penguin-dark.svg" 
                     alt="Hosted by the OCF" 
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
+                    className="w-20 h-20"
                 />
             </Link>
         </section>
+      </div>
     </div>
   );
 }

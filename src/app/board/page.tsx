@@ -33,11 +33,11 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
       <Image
         src={member.imageSrc}
         alt={`${member.name} photo`}
-        className="w-50 h-50 mx-auto object-cover mb-4"
+        className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
         width={200}
         height={200}
       />
-      <h3 className="text-xl font-bold">{member.name}</h3>
+      <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
       <p className="text-sm text-gray-600">{member.title}</p>
       <p className="text-sm mt-2 text-gray-700">{member.bio}</p>
     </div>
@@ -65,10 +65,10 @@ export default function BoardPage() {
       imageSrc: "/board/Yaeko.jpg",
     },
     {
-      name: "Sasha Bergseid",
+      name: "Jerry Wang",
       title: "Secretary",
-      bio: "Sasha is a sophomore EECS major with a Russian language and literature minor. In her free time, she likes to defend spiders in verbal debate, participate in all things music, swim, and hide in the shade while being outside.",
-      imageSrc: "/board/Sasha.jpg",
+      bio: "Jerry is a Japanese Language & Culture major in the c/o '28. For the past 10 years he has been an avid grower of epiphytic Hylocereeae cacti, but has recently shifted his focus to temperate terrestrial orchids such as Calanthe spp. He also has a particular interest in in-vitro seed propagation as a means of orchid conservation.",
+      imageSrc: "/board/Jerry.png",
     },
   ];
 
@@ -102,24 +102,24 @@ export default function BoardPage() {
 
   return (
     <main className={`${roboto.className} min-h-screen bg-white`}>
-      <section className="bg-foreground py-8">
+      <section className="bg-green-800 py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className={`${merriweather.className} text-4xl font-bold text-center text-white mb-10`}>
+          <h1 className={`${merriweather.className} text-3xl md:text-4xl font-bold text-center text-white mb-6 md:mb-10`}>
             Student Board Members
           </h1>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
             {studentBoardMembers.map((member) => (
               <BoardMemberCard key={member.name} member={member} />
             ))}
           </div>
         </div>
       </section>
-      <section className="bg-white py-8">
+      <section className="bg-white py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className={`${merriweather.className} text-4xl font-bold text-center text-gray-900 mb-10`}>
+          <h1 className={`${merriweather.className} text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 md:mb-10`}>
             Departmental Advisors
           </h1>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
             {staffBoardMembers.map((member) => (
               <BoardMemberCard key={member.name} member={member} />
             ))}
@@ -127,17 +127,18 @@ export default function BoardPage() {
         </div>
       </section>
 
-      <section className="flex justify-between mt-6">
-        <h2 className="text-sm text-black">
+      <section className="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 py-6">
+        <h2 className="text-xs sm:text-sm text-black text-center sm:text-left">
             We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.
         </h2>
 
-        <Link href="https://www.ocf.berkeley.edu">
+        <Link href="https://www.ocf.berkeley.edu" className="flex-shrink-0">
             <Image 
                 src="/ocf-hosted-penguin-dark.svg" 
                 alt="Hosted by the OCF" 
-                width={100}
-                height={100}
+                width={80}
+                height={80}
+                className="w-20 h-20"
             />
         </Link>
       </section>

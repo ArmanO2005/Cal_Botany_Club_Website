@@ -153,10 +153,10 @@ function NextFourGCalEvents({
 
   return (
     <div className={className}>
-      <h2 className={`${merriweather.className} text-3xl font-semibold mb-4`}>Upcoming Events</h2>
-      <ul className="flex justify-between">
+      <h2 className={`${merriweather.className} text-2xl md:text-3xl font-semibold mb-4 text-center md:text-left`}>Upcoming Events</h2>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-4">
         {events.slice(0, maxResults).map((ev) => (
-          <li key={ev.id} className="mr-4 bg-background rounded-xl border border-gray-200 p-4 hover:shadow-sm transition">
+          <li key={ev.id} className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-sm transition">
             <Link
               href={ev.htmlLink ?? "#"}
               target="_blank"
@@ -192,20 +192,20 @@ export default function Page() {
   }, []);
 
   return (
-    <main className={`${roboto.className} min-h-screen bg-white text-gray-900`}>
+    <main className={`${roboto.className} min-h-screen w-full bg-white text-gray-900`}>
       <section
-        className="text-white pt-30 pb-3"
+        className="text-white py-12 md:py-20 px-4"
         style={{
           backgroundImage: "url('/superBloom.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <h1 className={`${merriweather.className} text-7xl font-thin mb-4 text-center`}>
+        <h1 className={`${merriweather.className} text-4xl md:text-6xl lg:text-7xl font-thin mb-8 md:mb-4 text-center`}>
           Botany at Berkeley
         </h1>
 
-        <div className="m-4 mt-30">
+        <div className="px-2 md:px-4 mt-8 md:mt-12">
             <NextFourGCalEvents
                 calendarId="calbotany@gmail.com"
                 apiKey={secrets.Calendar_API_Key}
@@ -217,44 +217,50 @@ export default function Page() {
       </section>
 
       {/* Events Section */}
-      <section className="flex justify-center m-4">
-        <div className="m-4 mr-10">
-          <h2 className="text-3xl font-semibold mb-4">Join Us</h2>
-          <ul className="list-disc pl-6 text-lg space-y-2">
-            <li>📅 Meetings occur during the second Tuesday of every month at 5:30 pm</li>
+      <section className="flex flex-col lg:flex-row justify-center gap-6 px-4 py-8 max-w-6xl mx-auto">
+        <div className="flex-1">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Join Us</h2>
+          <ul className="list-disc pl-6 text-base md:text-lg space-y-2">
+            <li>📅 Regular Meetings occur during the first Wednesday of every month at 5:30 pm</li>
             <li>📍 Meetings will be held in the Herbarium Conference Room, 1002 VLSB</li>
             <li>🎤 Speakers will be posted on our calendar prior to each meeting</li>
             <li>⛺ Club trips will be posted on Instagram and on the calendar</li>
           </ul>
         </div>
-        <div className="m-4 ml-10">
-          <h2 className="text-3xl font-semibold mb-4">Get in Touch</h2>
-          <p className="text-lg mb-4">
+        <div className="flex-1">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Get in Touch</h2>
+          <p className="text-base md:text-lg mb-4">
             Join the club's {" "}
             <Link href="https://discord.gg/pFawnGxbmQ" className="text-blue-600 underline">
               Discord Server
             </Link>
           </p>
-          <p className="text-lg mb-4">
+          <p className="text-base md:text-lg mb-4">
             Email us at{" "}
             <Link href="mailto:calbotany@gmail.com" className="text-blue-600 underline">
               calbotany@gmail.com
             </Link>
           </p>
-          <p className="text-lg">
+          <p className="text-base md:text-lg mb-4">
             Follow us on Instagram:{" "}
             <Link href="https://www.instagram.com/calbotany/" className="text-blue-600 underline">
               @calbotany
             </Link>
           </p>
+          <p className="text-base md:text-lg">
+            Check out this neat {" "}
+            <Link href="https://armano2005.github.io/Plant_Guessing_Game/" className="text-blue-600 underline">
+              plant/fungi identification game
+            </Link>
+          </p>
         </div>
       </section>
 
-      <section className="bg-foreground py-12 px-6">
-        <h2 className="text-3xl font-semibold mb-4 text-white">
+      <section className="bg-green-800 px-4 py-6">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white text-center md:text-left">
           Recent Observations Made by Our Members
         </h2>
-        <h2 className="text-2xl font-thin mb-4 text-white">
+        <h2 className="text-xl md:text-2xl font-thin mb-4 text-white text-center md:text-left">
           Join Our{" "}
           <Link
             href="https://www.inaturalist.org/projects/uc-berkeley-botany-club"
@@ -265,28 +271,29 @@ export default function Page() {
         </h2>
 
         <div
-          className={`widget-${PROJECT_ID} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}
+          className={`widget-${PROJECT_ID} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4`}
           aria-live="polite"
         />
 
         <Link
           href="https://www.inaturalist.org/projects/uc-berkeley-botany-club?tab=observations"
-          className="text-2xl text-blue-200"
+          className="text-xl md:text-2xl text-blue-200 block mt-4"
         >
           See More{" "}
         </Link>
 
-        <section className="flex justify-between mt-6">
-            <h2 className="text-sm text-white">
+        <section className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6 pt-4 border-t border-green-700">
+            <h2 className="text-xs sm:text-sm text-white text-center sm:text-left">
                 We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.
             </h2>
 
-            <Link href="https://www.ocf.berkeley.edu">
+            <Link href="https://www.ocf.berkeley.edu" className="flex-shrink-0">
                 <Image 
                     src="/ocf-hosted-penguin-dark.svg" 
                     alt="Hosted by the OCF" 
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
+                    className="w-20 h-20"
                 />
             </Link>
         </section>
